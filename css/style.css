@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:#E5DFD6;
+}
+
+/* header logo navigation */
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+header {
+    padding: 30px;
+
+}
+
+.logo img {
+    height: 140px;
+    object-fit: contain;
+}
+
+ul.menu {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    padding: 0 120px 0 0; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: #7A816C;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.menu li a:hover {
+    color: #AE6965; /* синий при наведении */
+}
+
+.menu li.active a::before {
+    content: '(';
+    margin-right: 5px;
+}
+
+.menu li.active a::after {
+    content: ')';
+    margin-left: 5px;
+}
+
+/* hero */
+
+.hero {
+    background-color: #F2EEE9;
+}
+
+.hero-grid {
+    padding: 50px 0;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    
+}
+
+.hero-left {
+    font-size: 24px;
+    font-weight: 600;
+    color: #7A816C;
+    
+}
+
+.hero-center {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hero-center img {
+    width: 480px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.hero-right {
+    padding: 20px 60px;
+    font-size: 28px;
+    color: #7A816C;
+}
+
+/* Projects */
+
+.projects {
+    padding: 100px 0;
+    background-color: #E9DFD6;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.projects-title {
+    font-size: 39px;
+    margin-bottom: 40px;
+}
+
+.projects-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.project-title {
+    font-size: 28px;
+    text-decoration: none;
+    color:#7A816C;
+    transition: color 0.3s;
+}
+
+.project-title:hover {
+    color:#AE6965;
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    display: block;
+
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* */
+
+.skills {
+    padding: 100px 0;
+    background-color: #F2EEE9;
+}
+
+.skills-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Карточка */
+.skill-card {
+    background-color: #FFF;
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #7A816C;
+}
+
+/* Теги */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-card h3 {
+    color: #7A816C;
+}
+.skill-tags span {
+    background-color: #D1A9A5;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* */
+
+.about {
+    padding: 100px 0;
+    background: #E5DFD6;
+}
+
+.about-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #7A816C;
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #7A816C;
+}
+
+.about-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #AE6965;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #7A816C;
+}
+
+/* footer */
+
+.footer {
+    background-color: #7A816C;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-contacts p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-socials {
+    display: flex; 
+    gap: 20px; 
+    justify-content: center;
+}
+
+.footer-socials a {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 14px; 
+    transition: opacity 0.3s; 
+}
+
+.footer-socials a:hover {
+    color: #D1A9A5;
+}
+
+.footer-copy {
+    text-align: right; 
+    font-size: 14px; 
+}
